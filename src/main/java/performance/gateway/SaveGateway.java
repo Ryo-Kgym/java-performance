@@ -1,4 +1,4 @@
-package java.performance.gateway;
+package performance.gateway;
 
 public interface SaveGateway<O> {
     void save(O o);

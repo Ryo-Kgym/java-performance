@@ -1,4 +1,4 @@
-package java.performance.error;
+package performance.error;
 
 public class JavaPerformanceException extends Exception {
 }

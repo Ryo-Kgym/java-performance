@@ -1,6 +1,6 @@
-package java.performance.core.usecase;
+package performance.usecase;
 
-import java.performance.error.JavaPerformanceException;
+import performance.error.JavaPerformanceException;
 
 /**
  * UseCaseを生成するクラスです。

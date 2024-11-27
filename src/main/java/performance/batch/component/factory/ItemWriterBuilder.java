@@ -2,9 +2,9 @@
  * Copyright (c) 2023 Ryo-Kgym.
  */
 
-package java.performance.batch.component.factory;
+package performance.batch.component.factory;
 
-import java.performance.gateway.SaveGateway;
+import performance.gateway.SaveGateway;
 
 import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemWriter;

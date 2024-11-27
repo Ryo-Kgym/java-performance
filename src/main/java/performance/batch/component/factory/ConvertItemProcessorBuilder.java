@@ -2,10 +2,10 @@
  * Copyright (c) 2023 Ryo-Kgym.
  */
 
-package java.performance.batch.component.factory;
+package performance.batch.component.factory;
 
-import java.performance.core.usecase.UseCaseWithException;
-import java.performance.error.JavaPerformanceException;
+import performance.usecase.UseCaseWithException;
+import performance.error.JavaPerformanceException;
 import java.util.function.Function;
 
 import org.springframework.batch.item.ItemProcessor;
