@@ -1,4 +1,4 @@
-package performance.batch.config.job;
+package performance.core.usecase.instanceComparison;
 
 import lombok.Builder;
 import lombok.Value;

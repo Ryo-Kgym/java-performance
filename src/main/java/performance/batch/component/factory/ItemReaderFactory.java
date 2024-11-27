@@ -1,23 +1,21 @@
 package performance.batch.component.factory;
 
-import performance.batch.config.job.InstanceComparisonInput;
+import java.util.function.Function;
 
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.NonTransientResourceException;
-import org.springframework.batch.item.ParseException;
-import org.springframework.batch.item.UnexpectedInputException;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ItemReaderFactory {
 
-    public ItemReader<InstanceComparisonInput> itemReader() {
-        return new ItemReader<InstanceComparisonInput>() {
+    public <I>ItemReader<I> countingItemReader(long maxIndex, Function<Long, I> inputDataFactory) {
+        return new ItemReader<>() {
+            long currentIndex = 0;
+
             @Override
-            public InstanceComparisonInput read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-                return InstanceComparisonInput.builder()
-                    .index(1)
-                    .build();
+            public I read() {
+                currentIndex++;
+                return currentIndex <= maxIndex ? inputDataFactory.apply(currentIndex) : null;
             }
         };
     }
